@@ -1,0 +1,16 @@
+h1 a {
+    color: white;
+
+    cursor: pointer;
+    font-size: 50px;
+}
+
+p  {
+    color: white;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+body {
+    background-color: black;
+}

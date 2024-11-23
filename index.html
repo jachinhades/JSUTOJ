@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>JSUT's ACM Online Judge</title>
+    <link rel="stylesheet" href="iconfont.css">
+    <link rel="stylesheet" href="index.css">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./echarts.min.js"></script>
+</head>
+<body>
+<div class="content">
+    <div class="menu-box">
+        <!-- 展示与隐藏侧边栏 开始-->
+        <input type="checkbox" id="menu-btn">
+        <label for="menu-btn"><i class="iconfont icon-yemianfanhui"></i></label>
+        <!-- 展示与隐藏侧边栏 结束-->
+        <div class="menu">
+            <!-- 侧边栏的标题 开始-->
+            <div class="menu-title">
+                <h1>Menu</h1>
+            </div>
+            <!-- 侧边栏的标题 结束-->
+
+            <!-- 每一项导航 -->
+            <div class="menu-item">
+                <input type="checkbox" id="menu-item1">
+                <label for="menu-item1">
+                    <i class="menu-item-icon iconfont icon-a-01-shujuzhongxin"></i>
+                    <span>Question Bank</span>
+                    <i class="menu-item-last iconfont icon-down"></i>
+                </label>
+                <div class="menu-content">
+                    <span><a href="question_bank.html">Self Question Bank</a></span>
+                    <span><a href="https://codeforces.com">Codeforces</a></span>
+                    <span><a href="https://acm.hdu.edu.cn/">HDU Online Judge</a></span>
+                    <span><a href="https://luogu.com.cn">Luogu Online Judge</a></span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <input type="checkbox" id="menu-item2">
+                <label for="menu-item2">
+                    <i class="menu-item-icon iconfont icon-a-02-kechengguanli"></i>
+                    <span>Question List</span>
+                    <i class="menu-item-last iconfont icon-down"></i>
+                </label>
+                <div class="menu-content">
+                    <span>Question List</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <input type="checkbox" id="menu-item3">
+                <label for="menu-item3">
+                    <i class="menu-item-icon iconfont icon-a-04-zixunfabu"></i>
+                    <span>Discussion</span>
+                    <i class="menu-item-last iconfont icon-down"></i>
+                </label>
+                <div class="menu-content">
+                    <span>Academic</span>
+                    <span>Life</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <input type="checkbox" id="menu-item4">
+                <label for="menu-item4">
+                    <i class="menu-item-icon iconfont icon-a-04-zixunfabu"></i>
+                    <span>Competition</span>
+                    <i class="menu-item-last iconfont icon-down"></i>
+                </label>
+                <div class="menu-content">
+                    <span>School Competition</span>
+                    <span><a href="https://codeforces.com/gyms">Codeforces Gym</a></span>
+                    <span><a href="https://codeforces.com/contests">Codeforces Contest</a></span>
+                </div>
+            </div>
+
+            <div class="set-line"></div>
+
+            <div class="menu-item">
+                <label>
+                    <i class="menu-item-icon iconfont icon-a-08-shezhi"></i>
+                    <span><a href="login.html">User Center</a></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-8">
+
+
+                <div class="row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Contest</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Coming Contest</h6>
+                                <p class="card-text">No Contest Found!<br>No Contest Found!</p>
+                                <a href="http://codeforces.com" class="card-link">More</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Question</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Random Question</h6>
+                                <p class="card-text">No Question Found!<br>No Question Found!</p>
+                                <a href="http://acm.hdu.edu.cn" class="card-link">More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Force next columns to break to new line -->
+                    <div style="padding: 10px" class="w-100"></div>
+
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="card" style="height: 300px">
+                            <div class="card-body">
+
+                                <h5 class="card-title">Near Three Day's Pass</h5>
+                                <div id="main" style="width:100%;height:250px;"></div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="card" style="height:300px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Code Rating</h5>
+                                <div id="dashboard" style="width:100%;height:250px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="col-sm-4 mb-3 mb-sm-0">
+
+                <div class="card" style="width: 100%;">
+
+                    <div class="card-body">
+                        <div class="u-md lg-punch text-center"><h2><span style="color:rgb(14, 144, 210)">Yours </span>Fortune
+                        </h2>
+                            <span style="font-size:60px;font-weight:bold;">§ Bad §</span>
+
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"> There are 12 days from the ICPC Shan'an Xi invitational Contest. </li>
+                            <li class="list-group-item">There are 96 days from the ICPC Oline Contest(Round 1).</li>
+                            <li class="list-group-item">There are 103 days from the ICPC Oline Contest(Round 2).</li>
+                            <li class="list-group-item">Today have atcoder ABC contest. </li>
+                            <li class="list-group-item">Today have Codeforces contest(div 1+2).</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="https://codeforces.com" class="card-link">Codeforces link</a>
+                            <a href="https://atcoder.jp/contests/" class="card-link">AtCoder link</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div style="padding-top: 10px" class="col-sm-12 mb-3 mb-sm-0">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Calender</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Heat Map</h6>
+                        <div id="calender" style="width:100%;height:250px;"></div>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+
+    var myChart = echarts.init(document.getElementById('main'));
+    var myChart2 = echarts.init(document.getElementById('dashboard'));
+    var myChart3 = echarts.init(document.getElementById('calender'));
+
+    // 指定图表的配置项和数据
+    var option1 = {
+        var num;
+        tooltip: {},
+        legend: {
+            data: ['Number']
+        },
+        xAxis: {
+            data: ['erey-esterday', 'yesterday', 'today']
+        },
+        yAxis: {},
+        series: [
+            {
+                name: 'Number',
+                type: 'bar',
+                data: [num, 4, 1]
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option1);
+
+    var option2 = {
+        series: [
+            {
+                type: 'gauge',
+                startAngle: 180,
+                endAngle: 0,
+                center: ['50%', '75%'],
+                radius: '90%',
+                min: 0,
+                max: 1,
+                splitNumber: 8,
+                axisLine: {
+                    lineStyle: {
+                        width: 6,
+                        color: [
+                            [0.25, '#FF6E76'],
+                            [0.5, '#FDDD60'],
+                            [0.75, '#58D9F9'],
+                            [1, '#7CFFB2']
+                        ]
+                    }
+                },
+                pointer: {
+                    icon: 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
+                    length: '12%',
+                    width: 20,
+                    offsetCenter: [0, '-60%'],
+                    itemStyle: {
+                        color: 'auto'
+                    }
+                },
+                axisTick: {
+                    length: 12,
+                    lineStyle: {
+                        color: 'auto',
+                        width: 2
+                    }
+                },
+                splitLine: {
+                    length: 20,
+                    lineStyle: {
+                        color: 'auto',
+                        width: 5
+                    }
+                },
+                axisLabel: {
+                    color: '#464646',
+                    fontSize: 20,
+                    distance: -60,
+                    rotate: 'tangential',
+                    formatter: function (value) {
+                        if (value === 0.875) {
+                            return 'Grade A';
+                        } else if (value === 0.625) {
+                            return 'Grade B';
+                        } else if (value === 0.375) {
+                            return 'Grade C';
+                        } else if (value === 0.125) {
+                            return 'Grade D';
+                        }
+                        return '';
+                    }
+                },
+                title: {
+                    offsetCenter: [0, '-10%'],
+                    fontSize: 20
+                },
+                detail: {
+                    fontSize: 30,
+                    offsetCenter: [0, '-35%'],
+                    valueAnimation: true,
+                    formatter: function (value) {
+                        return Math.round(value * 3500) + '';
+                    },
+                    color: 'inherit'
+                },
+                data: [
+                    {
+                        value: 0.5,
+                        name: 'Code Rating'
+                    }
+                ]
+            }
+        ]
+    };
+    myChart2.setOption(option2);
+
+    function getVirtualData(year) {
+        const date = +echarts.time.parse(year + '-01-01');
+        const end = +echarts.time.parse(+year + 1 + '-01-01');
+        const dayTime = 3600 * 24 * 1000;
+        const data = [];
+        for (let time = date; time < end; time += dayTime) {
+            data.push([
+                echarts.time.format(time, '{yyyy}-{MM}-{dd}', false),
+                Math.floor(Math.random() * 5)
+            ]);
+        }
+        return data;
+    }
+
+    var option3 = {
+        title: {
+            top: 30,
+            left: 'center',
+            text: 'Daily Pass Question'
+        },
+        tooltip: {},
+        visualMap: {
+            min: 0,
+            max: 10,
+            type: 'piecewise',
+            orient: 'horizontal',
+            left: 'center',
+            top: 65
+        },
+        calendar: {
+            top: 120,
+            left: 30,
+            right: 30,
+            cellSize: ['auto', 13],
+            range: '2016',
+            itemStyle: {
+                borderWidth: 0.5
+            },
+            yearLabel: {show: false}
+        },
+        series: {
+            type: 'heatmap',
+            coordinateSystem: 'calendar',
+            data: getVirtualData('2016')
+        }
+    };
+    myChart3.setOption(option3);
+
+</script>
+</html>

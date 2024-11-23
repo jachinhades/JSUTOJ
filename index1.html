@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>城市数据分析可视化系统</title>
+    <style>
+        .background-image {
+            background-image: url('chengshitop.jpg');
+            background-size: cover; /* 图片覆盖整个容器 */
+            background-position: center; /* 图片居中 */
+            position: relative;
+            height: 200px; /* 设置容器的高度，根据你的需求调整 */
+            display: flex; /* 使用Flexbox来居中内容 */
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+        }
+
+        .background-image a {
+            font-weight: bold;
+            color: black;
+            font-size: 80px;
+            font-family: '行书', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+         .doc-image {
+             display: flex;
+             flex-direction: column;
+             text-align: center; /* 水平居中链接文本 */
+             height: 180px;/* 设置你想要的高度 */;
+             margin:0;
+             border:0;
+             padding:0;
+             /* 其他的样式，如背景、边框等 */
+         }
+        .doc-image a {
+            font-weight: bold;
+            color: black;
+            font-size: 40px;
+            text-decoration: none; /* 去除链接下划线 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px; /* 添加链接之间的间距 */
+        }
+        .lj-image {
+            margin:0;
+            border:0;
+            padding:0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中（但在这里对单行内容不起作用）*/
+            text-align: center; /* 水平居中链接文本 */
+            height: 200px;/* 设置你想要的高度 */;
+        }
+        .lj-image a {
+            font-weight: bold;
+            color: black;
+            font-size: 20px;
+            text-decoration: none; /* 去除链接下划线 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px; /* 添加链接之间的间距 */
+        }
+    </style>
+</head>
+<body>
+<div class="background-image">
+    <a>
+        欢迎使用城市数据分析可视化系统!
+    </a>
+</div>
+
+<div class="doc-image">
+    <a>部分省会的详细数据展示</a>
+
+</div>
+<div class="lj-image">
+    <a href="part-maincity.html">城市2022区域产值名</a>
+    <a href="Deposit_balance.html">城市2022居民平均存款</a>
+    <a href="Denvironment_roadtraffic.html">城市2022环境因素和人文因素</a>
+    <a href="house.html">城市2022房产相关数据</a>
+    <a href="Total_student_hospital_doctor.html">城市2022人口数量数据</a>
+</div>
+<div class="doc-image" style="height: 200px;">
+
+    <a href="third.html">2022年部分城市第三产业的发展排名</a>
+    <br>
+</div>
+
+</body>
+
+</html>

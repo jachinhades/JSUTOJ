@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <script src="./echarts.min.js"></script>
+</head>
+<body>
+<a href="login.html">Welcome To JSUT's ACM Online Judge!</a>
+<br >
+<a href="signup.html">qqqqq</a>
+<a href="signup.html">
+    <input class="button" value="name" >
+</a>
+<div id="main" style="width:100%;height:250px;">1234</div>
+</body>
+<script>
+    var myChart = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    var option1 = {
+        var num;
+        tooltip: {},
+        legend: {
+            data: ['Number']
+        },
+        xAxis: {
+            data: ['erey-esterday', 'yesterday', 'today']
+        },
+        yAxis: {},
+        series: [
+            {
+                name: 'Number',
+                type: 'bar',
+                data: [num, 4, 1]
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option1);
+
+</script>
+</html>
